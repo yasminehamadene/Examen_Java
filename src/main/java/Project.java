@@ -3,18 +3,17 @@ import static org.junit.Assert.*;
 
 public class ProjectTest {
 
+    // Test pour vérifier l'ajout d'une tâche au projet et à la gestion des tâches
     @Test
     public void testAjouterTacheAuProjetEtGestionTaches() {
-        GestionTaches gestionTaches = new GestionTaches();
-        Projet projet = new Projet("Mon Projet", gestionTaches);
+        GestionTaches gestionTaches = new GestionTaches(); // instance de GestionTaches
+        Projet projet = new Projet("Mon Projet", gestionTaches); 
 
         // Ajouter une tâche au projet
         projet.ajouterTache("Tâche 1", "Description ......de la tâche 1");
-
-        // Vérifier que la tâche est ajoutée au projet
+        
         assertEquals(1, projet.getTaches().size());
 
-        // Vérifier que la tâche est également ajoutée à la gestion des tâches
         assertTrue(gestionTaches.verifierTache("Tâche 1"));
     }
 
