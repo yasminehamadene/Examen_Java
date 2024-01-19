@@ -9,7 +9,6 @@ public class Taches {
         this.completee = false;
     }
 
-    // Getters et Setters
     public String getTitre() {
         return titre;
     }
